@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create NOte</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <h2>Create Note</h2>
+    <!--  this action button is diving the link in to the dever  -->
+    <form action="/notes" method="POST">
+
+        <label for="titleInput">Title</label>
+        <input type="text" id="titleInput" name="title">
+
+        <label for="contentsInput">Contents</label>
+        <textarea name="contents" id="contentsInput" cols="30" rows="10"></textarea>
+
+        <button type="submit">Summit</button>
+        
+    </form>
+    <a href="/notes">Back</a>
+    
+    
+</body>
+</html>

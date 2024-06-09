@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All notes</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h3>notes</h3>
+    <ul>
+        <!--  this help to search any word relating to  in the  page -->
+        <form action="/notes" method="GET">
+            <label for="searchInput">Search: </label>
+            <input type="text", name="searchTerm", id="searchInput" placeholder="search">
+            <button>search</button>
+            <!-- looking for -->
+        </form>
+
+        <% notes.forEach((note) => { %>
+            <li>
+                <h2><%= note.title %></h2>
+                <p><%= note.contents.substring(0, 200) %>...</p>
+                <p><%= new Date(note.timestamp) %></p>
+                <a href="/notes/<%= note.id %>">view more</a>
+            </li>
+        <% }) %>
+        
+        <a href="/createNote">create note</a>
+    </ul>
+</body>
+</html>
