@@ -1,0 +1,21 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 700px;
+    margin: auto;
+}
+ul{
+    list-style: none;
+}
+h1{
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+}
