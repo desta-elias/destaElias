@@ -2,7 +2,7 @@
 const express  = require('express')
 // import {getNote, getNotes} from './database.js'
 const database = require('./database')
-
+ require('dotenv').config();
 
 
 // this intaltion the express app
@@ -60,7 +60,7 @@ app.use(express.static('public'));
 
 
 // this running the server and listen to i the port
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Example app listening on Port: http://localhost:${PORT}`);
 });
